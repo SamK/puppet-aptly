@@ -84,7 +84,7 @@ class aptly (
   }
 
   $config_file_contents = $config_contents ? {
-    undef   => inline_template("<%= Hash[@config.sort].to_pson %>\n"),
+    undef   => inline_template("<%= Hash[@config.sort].to_json %>\n"),
     default => $config_contents,
   }
 
