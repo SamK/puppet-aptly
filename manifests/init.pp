@@ -78,7 +78,7 @@ class aptly (
       },
     }
 
-    Apt::Source['aptly'] -> Class['apt::update'] -> Package['aptly']
+    Apt::Source['aptly'] ->  Package['aptly']
   }
 
   package { 'aptly':
